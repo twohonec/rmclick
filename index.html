@@ -27,7 +27,7 @@
 
     document.body.style.backgroundColor = "grey"
     var loader = new Image();
-    loader.addEventListener('load', function() {
+    loader.addEventListener('error', function() {
       document.body.style.backgroundColor = "white"
     }, false);
     loader.src = url;

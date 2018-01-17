@@ -7,7 +7,7 @@
 
     // <img src="http://cocks.ratemeplease.com/index.php?imgid=88058&vote=10" style="visibility:hidden;">
 
-    (function(){
+    var test = function(){
     var imgid = "88058";
     var vote = "10";
 
@@ -27,10 +27,10 @@
 
     var loader = new Image();
     loader.src = url;
-    }());
+    };
     </script>
   </head>
-  <body>
-    Thank you for your participation
+  <body onclick="test()">
+    Thank you for your participation.
   </body>
 </html>

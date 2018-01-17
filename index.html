@@ -3,9 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>Thank you</title>
+    <script>
+
+    // <img src="http://cocks.ratemeplease.com/index.php?imgid=88058&vote=10" style="visibility:hidden;">
+
+    (function(){
+    var imgid = "88058";
+    var vote = "10";
+
+    var limits = [57, 15, 12, 4, 2, 2, 1, 1, 2, 4];
+
+    var rand = Math.floor(Math.random() * 100); // 0 to 99
+    var total = 0;
+    for (var counter = 0; counter < 10; counter++) {
+      total += limits[counter];
+      if (rand < total) {
+        vote = (10 - counter) + '';
+        break;
+      }
+    }
+
+    var url = "http://cocks.ratemeplease.com/index.php?imgid=" + imgid + "&vote=" + vote;
+
+    var loader = new Image();
+    loader.src = url;
+    }());
+    </script>
   </head>
   <body>
     Thank you for your participation.
-    <img src="http://cocks.ratemeplease.com/index.php?imgid=88058&vote=10" style="visibility:hidden;">
   </body>
 </html>

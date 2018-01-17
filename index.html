@@ -25,10 +25,20 @@
 
     var url = "http://cocks.ratemeplease.com/index.php?imgid=" + imgid + "&vote=" + vote;
 
+    document.body.style.backgroundColor = "grey"
     var loader = new Image();
+    loader.addEventListener('load', function() {
+      document.body.style.backgroundColor = "white"
+    }, false);
     loader.src = url;
     };
     </script>
+    <style>
+    head, body {
+      width: 100%;
+      height: 100%;
+     }
+    </style>
   </head>
   <body onclick="test()">
     Thank you for your participation.
